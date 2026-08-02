@@ -22,24 +22,58 @@ let humanScore = 0; let computerScore = 0;
 function getComputerChoice() {
     switch (Math.ceil(Math.random() * 5)) {
         case 1:
-            return "rock";
+            return 'rock';
         case 2:
-            return "paper";
+            return 'paper';
         case 3:
-            return "scissors";
+            return 'scissors';
         case 4:
-            return "lizard";
+            return 'lizard';
         default:
-            return "spock";
+            return 'spock';
     }
 }
 
 function getHumanChoice() {
-    let humanChoice = prompt(`Enter your choice for round ${humanScore + 
+    let humanChoice = prompt(`Enter your choice for round ${humanScore +
         computerScore + 1}`);
     return humanChoice.toLowerCase();
 }
 
+function playerWins(humanChoice, computerChoice) {
+    switch (computerChoice) {
+        case 'rock':
+            return humanChoice === 'paper' || humanChoice === 'spock';
+        case 'paper':
+            return humanChoice === 'scissors' || humanChoice === 'lizard';
+        case 'scissors':
+            return humanChoice === 'spock' || humanChoice === 'rock';
+        case 'lizard':
+            return humanChoice === 'scissors' || humanChoice === 'rock';
+        case 'spock':
+            return humanChoice === 'paper' || humanChoice === 'lizard';
+        default:
+            break;
+    }
+}
+
+const isTie = (humanChoice, computerChoice) => humanChoice === computerChoice;
+
+function playRound(humanChoice, computerChoice) {
+    if (isTie(humanChoice, computerChoice)){
+        console.log(`Draw! both chose ${humanChoice}`);
+        humanScore += 1;
+        computerScore += 1;
+    }
+    else if (playerWins(humanChoice, computerChoice)) {
+        console.log(`Player wins! ${humanChoice} beats ${computerChoice}`);
+        humanScore += 1;
+    }
+    else {
+        console.log(`Computer wins! ${computerChoice} beats ${humanChoice}`);
+        computerScore += 1;
+    }
+}
 
 console.log(getComputerChoice());
 // console.log(getHumanChoice());
