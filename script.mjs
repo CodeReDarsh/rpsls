@@ -17,7 +17,7 @@
  * Step5: playGame has logic to play entire game of 5 rounds
  */
 
-let humanScore = 0; let computerScore = 0;
+let humanScore = 0; let computerScore = 0; let round = 0;
 
 function getComputerChoice() {
     switch (Math.ceil(Math.random() * 5)) {
@@ -35,8 +35,7 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let humanChoice = prompt(`Enter your choice for round ${humanScore +
-        computerScore + 1}`);
+    let humanChoice = prompt(`Enter your choice for round ${++round}`);
     return humanChoice.toLowerCase();
 }
 
@@ -75,5 +74,18 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-console.log(getComputerChoice());
-// console.log(getHumanChoice());
+function playGame() {
+    while (round < 5)
+        playRound(getHumanChoice(), getComputerChoice());
+    
+    if (humanScore === computerScore)
+        console.log(`Its a tie! ${humanScore} - ${computerScore}`);
+    else if (humanScore > computerScore)
+        console.log(`Player wins game! ${humanScore} - ${computerScore}. Yay :) `);
+    else
+        console.log(`Player loses game! ${humanScore} - ${computerScore}. Better luck next time :/`);
+            
+    console.log('Refresh page to play again!');
+}
+
+playGame();
