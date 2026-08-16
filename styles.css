@@ -22,6 +22,14 @@ header {
   gap: 20px;
 }
 
+.crop {
+  width: 1000px;
+  height: 530px;
+  overflow: hidden;
+}
 
-
+.crop img {
+  object-fit: cover;
+  object-position: 50% -120px;
+}
 
