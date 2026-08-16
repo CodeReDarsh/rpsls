@@ -1,3 +1,25 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
+body {
+  background-image: url("assets/star-trek-background.jpg");
+  color: #5555FF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header, footer {
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  flex-direction: column;
+  justify-content: center;
+}
+
+header img {
+  flex: 0 1 auto;
+}
