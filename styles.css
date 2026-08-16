@@ -7,7 +7,7 @@ body {
   color: #5555FF;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
 header, footer {
@@ -17,9 +17,11 @@ header, footer {
 
 header {
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  margin: 30px 0px;
+  gap: 20px;
 }
 
-header img {
-  flex: 0 1 auto;
-}
+
+
+
