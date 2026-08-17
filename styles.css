@@ -58,7 +58,7 @@ header {
   font-size: x-large;
   margin-bottom: 70px;
   background-color: rgb(1, 1, 68);
-  padding: 56px 56px 40px 56px;
+  padding: 56px 56px 40px;
   border-radius: 20px;
   border: solid #00eaff 3px;
 }
@@ -74,7 +74,6 @@ header {
 }
 
 .play-box {
-  align-items: center;
   align-items: center;
   justify-content: space-around;
   gap: 50px;
@@ -155,11 +154,10 @@ header {
 
 .enemy-choice,
 .combat-info {
-  padding: 0px 40px;
+  padding-inline: 40px;
 }
 
 .enemy-choice {
   border-right: solid 5px #00eaff;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-block: 0;
 }
