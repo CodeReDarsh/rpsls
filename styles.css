@@ -54,8 +54,36 @@ header {
 
 .rules {
   font-size: x-large;
-  margin-bottom: 8%;
+  margin-bottom: 5%;
+  margin-top: 2%;
   background-color: rgb(1, 1, 68);
-  padding: 3%;
-  border-radius: 30px;
+  padding: 56px 56px 40px 56px;
+  border-radius: 20px;
+  border: solid #00eaff 3px;
 }
+
+.play-box {
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  background-color: rgb(1, 1, 68);
+  align-items: center;
+  gap: 50px;
+  padding: 0px 50px;
+  border: solid #00eaff 3px;
+  border-radius: 20px;
+}
+
+.play-box button {
+  width: 200px;
+  height: 200px;
+  border: solid 5px rgb(99, 107, 107);
+}
+
+.play-box img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+
