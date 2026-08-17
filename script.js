@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 /**
  * Step1: getComputerChoice needs to return a random play between rock, paper, 
  * scissors, lizard or spock. Can use Math.random.
@@ -22,15 +22,15 @@ let humanScore = 0; let computerScore = 0; let round = 0;
 function getComputerChoice() {
     switch (Math.ceil(Math.random() * 5)) {
         case 1:
-            return 'rock';
+      return "rock";
         case 2:
-            return 'paper';
+      return "paper";
         case 3:
-            return 'scissors';
+      return "scissors";
         case 4:
-            return 'lizard';
+      return "lizard";
         default:
-            return 'spock';
+      return "spock";
     }
 }
 
@@ -41,16 +41,16 @@ function getHumanChoice() {
 
 function playerWins(humanChoice, computerChoice) {
     switch (computerChoice) {
-        case 'rock':
-            return humanChoice === 'paper' || humanChoice === 'spock';
-        case 'paper':
-            return humanChoice === 'scissors' || humanChoice === 'lizard';
-        case 'scissors':
-            return humanChoice === 'spock' || humanChoice === 'rock';
-        case 'lizard':
-            return humanChoice === 'scissors' || humanChoice === 'rock';
-        case 'spock':
-            return humanChoice === 'paper' || humanChoice === 'lizard';
+    case "rock":
+      return humanChoice === "paper" || humanChoice === "spock";
+    case "paper":
+      return humanChoice === "scissors" || humanChoice === "lizard";
+    case "scissors":
+      return humanChoice === "spock" || humanChoice === "rock";
+    case "lizard":
+      return humanChoice === "scissors" || humanChoice === "rock";
+    case "spock":
+      return humanChoice === "paper" || humanChoice === "lizard";
         default:
             break;
     }
@@ -59,33 +59,32 @@ function playerWins(humanChoice, computerChoice) {
 const isTie = (humanChoice, computerChoice) => humanChoice === computerChoice;
 
 function playRound(humanChoice, computerChoice) {
-    if (isTie(humanChoice, computerChoice)){
+  if (isTie(humanChoice, computerChoice)) {
         console.log(`Draw! both chose ${humanChoice}`);
         humanScore += 1;
         computerScore += 1;
-    }
-    else if (playerWins(humanChoice, computerChoice)) {
+  } else if (playerWins(humanChoice, computerChoice)) {
         console.log(`Player wins! ${humanChoice} beats ${computerChoice}`);
         humanScore += 1;
-    }
-    else {
+  } else {
         console.log(`Computer wins! ${computerChoice} beats ${humanChoice}`);
         computerScore += 1;
     }
 }
 
 function playGame() {
-    while (round < 5)
-        playRound(getHumanChoice(), getComputerChoice());
+  while (round < 5) playRound(getHumanChoice(), getComputerChoice());
     
     if (humanScore === computerScore)
         console.log(`Its a tie! ${humanScore} - ${computerScore}`);
     else if (humanScore > computerScore)
         console.log(`Player wins game! ${humanScore} - ${computerScore}. Yay :) `);
     else
-        console.log(`Player loses game! ${humanScore} - ${computerScore}. Better luck next time :/`);
+    console.log(
+      `Player loses game! ${humanScore} - ${computerScore}. Better luck next time :/`,
+    );
             
-    console.log('Refresh page to play again!');
+  console.log("Refresh page to play again!");
 }
 
 playGame();
