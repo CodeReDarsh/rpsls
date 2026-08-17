@@ -87,3 +87,24 @@ header {
   height: 100%;
   width: 100%;
 }
+
+.combat-box {
+  justify-content: left;
+}
+
+.combat-box img {
+  width: 200px;
+  height: 200px;
+  border: solid 5px rgb(99, 107, 107);
+}
+
+.enemy-choice,
+.combat-info {
+  padding: 0px 40px;
+}
+
+.enemy-choice {
+  border-right: solid 5px #00eaff;
+  margin-top: 0;
+  margin-bottom: 0;
+}
