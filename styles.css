@@ -158,6 +158,10 @@ header {
 }
 
 .enemy-choice {
-  border-right: solid 5px #00eaff;
+  border-right: solid 3px #00eaff;
   margin-block: 0;
+}
+
+.enemy-choice img {
+  background-color: rgb(198, 198, 198);
 }
