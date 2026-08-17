@@ -91,48 +91,48 @@ header {
   opacity: 0.5;
 }
 
-.play-box button[title="Spock!"]:hover {
+.play-box #spock:hover {
   background-color: #00eaff;
   opacity: 1;
 }
 
-.play-box button[title="Spock!"]:active {
+.play-box #spock:active {
   opacity: 0.7;
 }
 
-.play-box button[title="Rock"]:hover {
+.play-box #rock:hover {
   background-color: #01a517;
   opacity: 1;
 }
 
-.play-box button[title="Rock"]:active {
+.play-box #rock:active {
   opacity: 0.7;
 }
 
-.play-box button[title="Paper"]:hover {
+.play-box #paper:hover {
   background-color: #fcfdfd;
   opacity: 1;
 }
 
-.play-box button[title="Paper"]:active {
+.play-box #paper:active {
   opacity: 0.7;
 }
 
-.play-box button[title="Scissors"]:hover {
+.play-box #scissors:hover {
   background-color: #eb3b3b;
   opacity: 1;
 }
 
-.play-box button[title="Scissors"]:active {
+.play-box #scissors:active {
   opacity: 0.7;
 }
 
-.play-box button[title="Lizard"]:hover {
+.play-box #lizard:hover {
   background-color: #a600e7;
   opacity: 1;
 }
 
-.play-box button[title="Lizard"]:active {
+.play-box #lizard:active {
   opacity: 0.7;
 }
 
