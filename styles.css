@@ -86,7 +86,7 @@ header {
   width: 200px;
   height: 200px;
   border: solid 5px rgb(99, 107, 107);
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: rgb(147, 146, 146);
   opacity: 0.5;
 }
