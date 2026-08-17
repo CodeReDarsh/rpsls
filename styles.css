@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -19,7 +21,6 @@
   src: url("depixel/depixel-semi-bold.woff2") format("woff2");
 }
 
-
 body {
   background-image: url("assets/star-trek-background.jpg");
   color: #00eaff;
@@ -29,7 +30,8 @@ body {
   font-family: "pixel-font-wide";
 }
 
-header, footer {
+header,
+footer {
   display: flex;
   justify-content: center;
 }
@@ -85,5 +87,3 @@ header {
   height: 100%;
   width: 100%;
 }
-
-
