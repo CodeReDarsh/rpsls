@@ -83,9 +83,58 @@ header {
 }
 
 .play-box button {
+  flex: 0 1 auto;
   width: 200px;
   height: 200px;
   border: solid 5px rgb(99, 107, 107);
+  border-radius: 10px;
+  background-color: rgb(147, 146, 146);
+  opacity: 0.5;
+}
+
+.play-box button[title="Spock!"]:hover {
+  background-color: #00eaff;
+  opacity: 1;
+}
+
+.play-box button[title="Spock!"]:active {
+  opacity: 0.7;
+}
+
+.play-box button[title="Rock"]:hover {
+  background-color: #01a517;
+  opacity: 1;
+}
+
+.play-box button[title="Rock"]:active {
+  opacity: 0.7;
+}
+
+.play-box button[title="Paper"]:hover {
+  background-color: #fcfdfd;
+  opacity: 1;
+}
+
+.play-box button[title="Paper"]:active {
+  opacity: 0.7;
+}
+
+.play-box button[title="Scissors"]:hover {
+  background-color: #eb3b3b;
+  opacity: 1;
+}
+
+.play-box button[title="Scissors"]:active {
+  opacity: 0.7;
+}
+
+.play-box button[title="Lizard"]:hover {
+  background-color: #a600e7;
+  opacity: 1;
+}
+
+.play-box button[title="Lizard"]:active {
+  opacity: 0.7;
 }
 
 .play-box img {
