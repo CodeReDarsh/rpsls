@@ -17,10 +17,6 @@
  * Step5: playGame has logic to play entire game of 5 rounds
  */
 
-let playerLives = 5;
-let computerLives = 5;
-let round = 0;
-
 const quotes = [
   `"We're human beings with the blood of a million savage years on our hands, but we can stop it. We can admit that we're killers, but we're not going to kill today. That's all it takes. Knowing that we won't kill today."
     
@@ -70,6 +66,11 @@ const quotes = [
   
   -Starfleet mission statement`,
 ];
+
+let playerLives = 5;
+let computerLives = 5;
+let round = 0;
+let playerChoice = "";
 
 function getComputerChoice() {
   switch (Math.ceil(Math.random() * 5)) {
