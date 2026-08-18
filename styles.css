@@ -144,6 +144,7 @@ header {
 
 .combat-box {
   justify-content: flex-start;
+  max-width: 700px;
   margin: 0;
 }
 
