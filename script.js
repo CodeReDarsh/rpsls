@@ -24,51 +24,51 @@ let round = 0;
 const quotes = [
   `"We're human beings with the blood of a million savage years on our hands, but we can stop it. We can admit that we're killers, but we're not going to kill today. That's all it takes. Knowing that we won't kill today."
     
-    ~Captain James T. (or R) Kirk, "Taste of Armageddon" `,
+    -Captain James T. (or R) Kirk, "Taste of Armageddon" `,
 
   `"It is possible to commit no mistakes and still lose. That is not a weakness. That is life."
   
-  ~Captain Jean-Luc Picard, "TNG: Peak Performance"`,
+  -Captain Jean-Luc Picard, "TNG: Peak Performance"`,
 
   `"I cannot defeat this Klingon. I can only kill him. And that no longer holds my interest."
   
-  ~First Ikat'ika Jem'Hadar, "DS9: By Inferno's Light"`,
+  -First Ikat'ika Jem'Hadar, "DS9: By Inferno's Light"`,
 
   `"Let me tell you something about hu-mons, nephew. They're a wonderful, friendly people as long as their bellies are full and their holosuites are working, but take away their creature comforts, deprive them of food, sleep, sonic showers, put their lives in jeopardy over an extended period of time and those same, friendly, intelligent, wonderful people will become as nasty and as violent as the most bloodthirsty Klingon."
 
-  ~Quark, "The Siege of AR-558"`,
+  -Quark, "The Siege of AR-558"`,
 
   `"If there is to be a brave new world, our generation is going to have the hardest time living in it."
   
-  ~Chancellor Gorkon, "Star Trek The Undiscovered Country."`,
+  -Chancellor Gorkon, "Star Trek The Undiscovered Country."`,
 
   `'You don’t need a ship to believe in what it stands for."
   
-  ~Dr. Boons, "Star Trek: Prodigy, All The World’s A Stage"`,
+  -Dr. Boons, "Star Trek: Prodigy, All The World’s A Stage"`,
 
   `"No man should understand where his dreams come from, Data."
   
-  ~Soong to Data, "Birthright pt. 1"`,
+  -Soong to Data, "Birthright pt. 1"`,
 
   `"The needs of the many outweigh the needs of the few, or the one."
   
-  ~Chief Science Officer Spock`,
+  -Chief Science Officer Spock`,
 
   `"Logic is the beginning of wisdom, not the end."
   
-  ~Chief Science Officer Spock`,
+  -Chief Science Officer Spock`,
 
   `"You know that pain and guilt can't be taken away with the wave of a magic wand! They're the things we carry with us, the things that make us who we are. If we lose them, we lose ourselves. I don't want my pain taken away, I need my pain!”
 
-  ~Captain James T. Kirk, "Star Trek V: The final Frontier"`,
+  -Captain James T. Kirk, "Star Trek V: The final Frontier"`,
 
   `"It is possible to commit no mistakes and still lose. That is not a weakness. That is life."
   
-  ~Captain Jean-Luc Picard to Data, "TNG: Peak Performance"`,
+  -Captain Jean-Luc Picard to Data, "TNG: Peak Performance"`,
 
   `"To seek out new life and new civilizations."
   
-  ~Starfleet mission statement`,
+  -Starfleet mission statement`,
 ];
 
 function getComputerChoice() {
