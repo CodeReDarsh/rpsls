@@ -153,7 +153,7 @@ function setEnemyChoiceImage(choice) {
 
 function setBoxBorderColor(element, roundDecision) {
   let color;
-  switch (round) {
+  switch (roundDecision) {
     case 0: // player lost
       color = "#ff1d1d";
       break;
