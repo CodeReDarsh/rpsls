@@ -86,24 +86,24 @@ function getComputerChoice() {
   }
 }
 
-function playerWins(humanChoice, computerChoice) {
+function playerWins(playerChoice, computerChoice) {
   switch (computerChoice) {
     case "rock":
-      return humanChoice === "paper" || humanChoice === "spock";
+      return playerChoice === "paper" || playerChoice === "spock";
     case "paper":
-      return humanChoice === "scissors" || humanChoice === "lizard";
+      return playerChoice === "scissors" || playerChoice === "lizard";
     case "scissors":
-      return humanChoice === "spock" || humanChoice === "rock";
+      return playerChoice === "spock" || playerChoice === "rock";
     case "lizard":
-      return humanChoice === "scissors" || humanChoice === "rock";
+      return playerChoice === "scissors" || playerChoice === "rock";
     case "spock":
-      return humanChoice === "paper" || humanChoice === "lizard";
+      return playerChoice === "paper" || playerChoice === "lizard";
     default:
       break;
   }
 }
 
-const isTie = (humanChoice, computerChoice) => humanChoice === computerChoice;
+const isTie = (playerChoice, computerChoice) => playerChoice === computerChoice;
 
 function playRound(humanChoice, computerChoice) {
   if (isTie(humanChoice, computerChoice)) {
