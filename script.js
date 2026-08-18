@@ -165,6 +165,11 @@ function handlePlayAgainRequest(each) {
 }
 
 const playBox = document.querySelector(".play-box");
+const combatBox = playBox.nextElementSibling;
+const [roundNumberPara, livesInfoPara, commentaryPara] = combatBox.lastElementChild.children;
+const resultsBox = combatBox.nextElementSibling;
+const playAgainBtn = resultsBox.lastElementChild;
+
 playBox.addEventListener("click", handleChoice);
 playAgainBtn.addEventListener("click", handlePlayAgainRequest);
 
