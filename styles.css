@@ -144,6 +144,7 @@ header {
 
 .combat-box {
   justify-content: flex-start;
+  width: 700px;
   max-width: 700px;
   margin: 0;
 }
@@ -157,11 +158,19 @@ header {
 .enemy-choice,
 .combat-info {
   padding-inline: 40px;
+  text-align: left;
 }
 
 .enemy-choice {
+  flex: none;
   border-right: solid 3px #00eaff;
   margin-block: 0;
+}
+
+.combat-info {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .enemy-choice img {
