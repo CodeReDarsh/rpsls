@@ -17,8 +17,8 @@
  * Step5: playGame has logic to play entire game of 5 rounds
  */
 
-let humanScore = 0;
-let computerScore = 0;
+let playerLives = 5;
+let computerLives = 5;
 let round = 0;
 
 const quotes = [
