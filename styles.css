@@ -176,12 +176,14 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
 }
 
 #results-text {
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 4rem;
+  background-color: black;
 }
 
 #play-again-btn {
