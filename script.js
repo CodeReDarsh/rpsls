@@ -157,11 +157,27 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function handleChoice(e) {
-    //TODO
+  if (e.target.tagName === "IMG") {
+    playerChoice = e.target.parentElement.id;
+  } else if (e.target.tagName === "BUTTON") {
+    playerChoice = e.target.id;
+  } else {
+    return;
+  }
+  playBox.focus();
+  playRound(playerChoice, getComputerChoice());
 }
 
-function handlePlayAgainRequest(each) {
-    //TODO
+function handlePlayAgainRequest(e) {
+  console.log(e);
+  resultsBox.hidden = true;
+  round = 0;
+  computerLives = 5;
+  playerLives = 5;
+  playerChoice = "";
+  setBoxBorderColor(combatBox, -1);
+  playBox.addEventListener("click", handleChoice);
+  playBox.focus();
 }
 
 const playBox = document.querySelector(".play-box");
