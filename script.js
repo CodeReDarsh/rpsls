@@ -196,8 +196,17 @@ function playRound(playerChoice, computerChoice) {
     setBoxBorderColor(combatBox, 1);
     commentaryPara.textContent = comments.playerChoice[`win${computerChoice}`];
   } else {
-    console.log(`Computer wins! ${computerChoice} beats ${humanChoice}`);
-    computerScore += 1;
+    // player loses
+    playerLives -= 1;
+    setBoxBorderColor(combatBox, 0);
+    commentaryPara.textContent = comments.playerChoice[`lose${computerChoice}`];
+  }
+
+  livesInfoPara.textContent = `Your lives: ${playerLives} | Enemy lives: ${computerLives}`;
+  if (playerLives <= 0) {
+    endGame(0);
+  } else if (computerLives <= 0) {
+    endGame(1);
   }
 }
 
