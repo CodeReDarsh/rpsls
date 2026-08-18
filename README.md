@@ -1,5 +1,5 @@
 # rpsls
-A browser based console game of rock, paper, scissors, lizard, spock! (As seen in the big bang theory)
+A browser based game of rock, paper, scissors, lizard, spock! (As seen in the big bang theory)
 
 Players play best of 5 rounds.
 
