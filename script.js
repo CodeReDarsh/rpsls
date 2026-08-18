@@ -86,11 +86,6 @@ function getComputerChoice() {
   }
 }
 
-function getHumanChoice() {
-  let humanChoice = prompt(`Enter your choice for round ${++round}`);
-  return humanChoice.toLowerCase();
-}
-
 function playerWins(humanChoice, computerChoice) {
   switch (computerChoice) {
     case "rock":
@@ -123,6 +118,24 @@ function playRound(humanChoice, computerChoice) {
     computerScore += 1;
   }
 }
+
+function handleChoice(e) {
+    //TODO
+}
+
+function handlePlayAgainRequest(each) {
+    //TODO
+}
+
+const playBox = document.querySelector(".play-box");
+playBox.addEventListener("click", handleChoice);
+
+const playAgainBtn = document.querySelector("#play-again-btn");
+playAgainBtn.addEventListener("click", handlePlayAgainRequest)
+
+
+
+
 
 function playGame() {
   while (round < 5) playRound(getHumanChoice(), getComputerChoice());
