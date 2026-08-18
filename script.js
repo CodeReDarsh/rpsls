@@ -69,8 +69,8 @@ const quotes = [
 
 let playerLives = 5;
 let computerLives = 5;
-let round = 0;
 let playerChoice = "";
+let round = 0;
 
 function getComputerChoice() {
   switch (Math.ceil(Math.random() * 5)) {
