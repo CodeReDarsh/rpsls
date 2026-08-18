@@ -140,16 +140,61 @@ function playerWins(playerChoice, computerChoice) {
   }
 }
 
-const isTie = (playerChoice, computerChoice) => playerChoice === computerChoice;
+function setEnemyChoiceImage(choice) {
+  const enemyChoiceImgElement = document.querySelector(".enemy-choice").lastElementChild;
+  let newSrc;
+  if (choice === "spock") {
+    newSrc = "./assets/mirror-spock.png";
+  } else {
+    newSrc = `./assets/${choice}.png`;
+  }
+  enemyChoiceImgElement.src = newSrc;
+}
 
-function playRound(humanChoice, computerChoice) {
-  if (isTie(humanChoice, computerChoice)) {
-    console.log(`Draw! both chose ${humanChoice}`);
-    humanScore += 1;
-    computerScore += 1;
-  } else if (playerWins(humanChoice, computerChoice)) {
-    console.log(`Player wins! ${humanChoice} beats ${computerChoice}`);
-    humanScore += 1;
+function setBoxBorderColor(element, roundDecision) {
+  let color;
+  switch (round) {
+    case 0: // player lost
+      color = "#ff1d1d";
+      break;
+    case 1: // player won
+      color = "#19ff44";
+      break;
+    case 2: // tie
+      color = "#9d1cf9";
+      break;
+    default: // reset game
+      color = "#00eaff";
+      break;
+  }
+  element.style.borderColor = color;
+  element.firstElementChild.style.borderRightColor = color;
+}
+
+function endGame(result) {
+  if (result === 0) {
+    resultsBox.firstElementChild.textContent = "You Lost :(";
+  } else {
+    resultsBox.firstElementChild.textContent = "You Win!";
+  }
+  playBox.removeEventListener("click", handleChoice);
+  resultsBox.hidden = false;
+  resultsBox.focus();
+}
+
+function playRound(playerChoice, computerChoice) {
+  setEnemyChoiceImage(computerChoice);
+  round += 1;
+  roundNumberPara.textContent = `Round: ${round}`;
+
+  if (playerChoice === computerChoice) {
+    // tie
+    setBoxBorderColor(combatBox, 2);
+    commentaryPara.textContent = "It seems neither has bested the other. Both survive this round.";
+  } else if (playerWins(playerChoice, computerChoice)) {
+    computerLives -= 1;
+    setBoxBorderColor(combatBox, 1);
+    commentaryPara.textContent = comments.playerChoice[`win${computerChoice}`];
   } else {
     console.log(`Computer wins! ${computerChoice} beats ${humanChoice}`);
     computerScore += 1;
