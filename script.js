@@ -67,6 +67,42 @@ const quotes = [
   -Starfleet mission statement`,
 ];
 
+const comments = {
+  rock: {
+    winscissors: "Your rock crushed the enemy Scissors! Huzzahh!",
+    winlizard: "Your rock crushed the lizard-like Gorn. Gorn begone!",
+    losepaper: "Damn! Evil Spock covered your rock with paper! It wasn't effective.",
+    losespock: "Uh-oh, mirror spock vaporized your rock with his phaser.",
+  },
+  paper: {
+    winrock: "Success! you used your paper to deflect that rock!",
+    winspock:
+      "Haha!! your paper's logic is one mirror Spock couldn't argue against! You've outwitted him.",
+    losescissors: "Nooo!, mirror Spock cut your paper up.",
+    loselizard: "Man, the stupid Gorn ate your paper.",
+  },
+  scissors: {
+    winpaper: "Yes, we don't care about your paper mirror Spock!",
+    winlizard: "Off with the Gorn's tail!",
+    loserock: "Primitive, yet effective. A rock smashed your scissors.",
+    losespock: "Hmm, it seems mirror spock himself smashed your scissors.",
+  },
+  lizard: {
+    winpaper: "Finally something a Gorn's useful for.",
+    winspock:
+      "Ooof, I wouldn't wanna be bit by a Gorn either. Mirror spock was poisoned by your Gorn.",
+    losescissors: "Mirror Spock cut your Gorn's tail, its out of control!",
+    loserock: "THUDD!, the sound of your Gorn hitting the floor as the rock hit its head.",
+  },
+  spock: {
+    winrock: "Spock set his phaser to vaporize. The rock has been obliterated!",
+    winscissors:
+      "Mirror spock couldn't find his scissors. Spock probably hid them. Its only logical.",
+    losepaper: "Rats, you can't argue with that logic Mr. Spock",
+    loselizard: "Oh no! Run Mr. Spock, that Gorn's after you!",
+  },
+};
+
 let playerLives = 5;
 let computerLives = 5;
 let playerChoice = "";
