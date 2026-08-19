@@ -190,6 +190,34 @@ function endGame(result) {
 
 function displayUpdatedRoundNumber() {
   roundNumberPara.textContent = `Round: ${round}`;
+}
+
+function updateCommentary(roundResult) {
+  switch (roundResult) {
+    case 0:
+      commentaryPara.textContent = comments.playerChoice[`lose${computerChoice}`];
+      break;
+    case 1:
+      commentaryPara.textContent = comments.playerChoice[`win${computerChoice}`];
+      break;
+    case 2:
+      commentaryPara.textContent =
+        "It seems neither has bested the other. Both survive this round.";
+      break;
+    default:
+      commentaryPara.textContent = "Begin your move player.";
+      break;
+  }
+}
+
+function displayUpdatedLives() {
+  livesInfoPara.textContent = `Your lives: ${playerLives} | Enemy lives: ${computerLives}`;
+}
+
+function playRound() {
+  round++;
+  displayUpdatedRoundNumber();
+  setEnemyChoiceImage();
 
   if (playerChoice === computerChoice) {
     // tie
