@@ -214,10 +214,10 @@ function displayUpdatedRoundNumber() {
 function updateCommentary(roundResult) {
   switch (roundResult) {
     case 0:
-      commentaryPara.textContent = comments.playerChoice[`lose${computerChoice}`];
+      commentaryPara.textContent = comments[playerChoice][`lose${computerChoice}`];
       break;
     case 1:
-      commentaryPara.textContent = comments.playerChoice[`win${computerChoice}`];
+      commentaryPara.textContent = comments[playerChoice][`win${computerChoice}`];
       break;
     case 2:
       commentaryPara.textContent =
