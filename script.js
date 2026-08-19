@@ -18,7 +18,9 @@
  */
 
 const quotes = [
-  `"We're human beings with the blood of a million savage years on our hands, but we can stop it. We can admit that we're killers, but we're not going to kill today. That's all it takes. Knowing that we won't kill today."
+  `"We're human beings with the blood of a million savage years on our hands, but we can stop it.
+  
+  We can admit that we're killers, but we're not going to kill today. That's all it takes. Knowing that we won't kill today."
     
     -Captain James T. (or R) Kirk, "Taste of Armageddon" `,
 
@@ -30,7 +32,11 @@ const quotes = [
   
   -First Ikat'ika Jem'Hadar, "DS9: By Inferno's Light"`,
 
-  `"Let me tell you something about hu-mons, nephew. They're a wonderful, friendly people as long as their bellies are full and their holosuites are working, but take away their creature comforts, deprive them of food, sleep, sonic showers, put their lives in jeopardy over an extended period of time and those same, friendly, intelligent, wonderful people will become as nasty and as violent as the most bloodthirsty Klingon."
+  `"Let me tell you something about hu-mons, nephew. They're a wonderful, friendly people as long as
+their bellies are full and their holosuites are working, but take away their creature comforts, 
+deprive them of food, sleep, sonic showers, put their lives in jeopardy over an extended period of
+time and those same, friendly, intelligent, wonderful people will become as nasty and as violent 
+as the most bloodthirsty Klingon."
 
   -Quark, "The Siege of AR-558"`,
 
@@ -38,9 +44,9 @@ const quotes = [
   
   -Chancellor Gorkon, "Star Trek The Undiscovered Country."`,
 
-  `'You don’t need a ship to believe in what it stands for."
+  `'You don't need a ship to believe in what it stands for."
   
-  -Dr. Boons, "Star Trek: Prodigy, All The World’s A Stage"`,
+  -Dr. Boons, "Star Trek: Prodigy, All The World's A Stage"`,
 
   `"No man should understand where his dreams come from, Data."
   
@@ -54,7 +60,11 @@ const quotes = [
   
   -Chief Science Officer Spock`,
 
-  `"You know that pain and guilt can't be taken away with the wave of a magic wand! They're the things we carry with us, the things that make us who we are. If we lose them, we lose ourselves. I don't want my pain taken away, I need my pain!”
+  `"You know that pain and guilt can't be taken away with the wave of a magic wand!
+  
+  They're the things we carry with us, the things that make us who we are. If we lose them, we lose ourselves.
+
+  I don't want my pain taken away, I need my pain!"
 
   -Captain James T. Kirk, "Star Trek V: The final Frontier"`,
 
@@ -65,6 +75,10 @@ const quotes = [
   `"To seek out new life and new civilizations."
   
   -Starfleet mission statement`,
+
+  `"Live long and prosper."
+  
+  -Vulcan greeting`,
 ];
 
 const comments = {
@@ -108,6 +122,10 @@ let computerLives = 5;
 let playerChoice = "";
 let computerChoice = "";
 let round = 0;
+
+function setRandomQuote() {
+  quotesBox.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+}
 
 function setRandomComputerChoice() {
   switch (Math.ceil(Math.random() * 5)) {
@@ -186,6 +204,7 @@ function endGame(result) {
   playBox.removeEventListener("click", handleChoice);
   resultsBox.hidden = false;
   resultsBox.focus();
+  setRandomQuote();
 }
 
 function displayUpdatedRoundNumber() {
@@ -276,6 +295,8 @@ const combatBox = playBox.nextElementSibling;
 const [roundNumberPara, livesInfoPara, commentaryPara] = combatBox.lastElementChild.children;
 const resultsBox = combatBox.nextElementSibling;
 const playAgainBtn = resultsBox.lastElementChild;
+const quotesBox = resultsBox.nextElementSibling;
 
 playBox.addEventListener("click", handleChoice);
 playAgainBtn.addEventListener("click", handlePlayAgainRequest);
+window.onload = setRandomQuote;
