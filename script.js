@@ -102,7 +102,7 @@ const comments = {
     losespock: "Hmm, it seems mirror spock himself smashed your scissors.",
   },
   lizard: {
-    winpaper: "Finally something a Gorn's useful for. (The gorn ate mirror Spock's paper.)",
+    winpaper: "Finally something a Gorn's useful for.",
     winspock:
       "Ooof, I wouldn't wanna be bit by a Gorn either. Mirror spock was poisoned by your Gorn.",
     losescissors: "Mirror Spock cut your Gorn's tail, its out of control!",
@@ -268,7 +268,6 @@ function handleChoice(e) {
   } else {
     return;
   }
-  playBox.focus();
   setRandomComputerChoice();
   playRound();
 }
@@ -287,7 +286,6 @@ function handlePlayAgainRequest(e) {
   updateCommentary(-1);
   setEnemyChoiceImage();
   playBox.addEventListener("click", handleChoice);
-  playBox.focus();
 }
 
 const playBox = document.querySelector(".play-box");
