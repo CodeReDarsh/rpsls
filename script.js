@@ -279,20 +279,3 @@ const playAgainBtn = resultsBox.lastElementChild;
 
 playBox.addEventListener("click", handleChoice);
 playAgainBtn.addEventListener("click", handlePlayAgainRequest);
-
-// function playGame() {
-//   while (round < 5) playRound(getHumanChoice(), getComputerChoice());
-
-//   if (humanScore === computerScore)
-//     console.log(`Its a tie! ${humanScore} - ${computerScore}`);
-//   else if (humanScore > computerScore)
-//     console.log(`Player wins game! ${humanScore} - ${computerScore}. Yay :) `);
-//   else
-//     console.log(
-//       `Player loses game! ${humanScore} - ${computerScore}. Better luck next time :/`,
-//     );
-
-//   console.log("Refresh page to play again!");
-// }
-
-// playGame();
