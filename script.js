@@ -106,20 +106,26 @@ const comments = {
 let playerLives = 5;
 let computerLives = 5;
 let playerChoice = "";
+let computerChoice = "";
 let round = 0;
 
-function getComputerChoice() {
+function setRandomComputerChoice() {
   switch (Math.ceil(Math.random() * 5)) {
     case 1:
-      return "rock";
+      computerChoice = "rock";
+      break;
     case 2:
-      return "paper";
+      computerChoice = "paper";
+      break;
     case 3:
-      return "scissors";
+      computerChoice = "scissors";
+      break;
     case 4:
-      return "lizard";
+      computerChoice = "lizard";
+      break;
     default:
-      return "spock";
+      computerChoice = "spock";
+      break;
   }
 }
 
