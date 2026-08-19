@@ -263,6 +263,10 @@ function handlePlayAgainRequest(e) {
   playerChoice = "";
   computerChoice = "";
   setBoxBorderColor(combatBox, -1);
+  displayUpdatedRoundNumber();
+  displayUpdatedLives();
+  updateCommentary(-1);
+  setEnemyChoiceImage();
   playBox.addEventListener("click", handleChoice);
   playBox.focus();
 }
