@@ -258,9 +258,10 @@ function handlePlayAgainRequest(e) {
   console.log(e);
   resultsBox.hidden = true;
   round = 0;
-  computerLives = 5;
   playerLives = 5;
+  computerLives = 5;
   playerChoice = "";
+  computerChoice = "";
   setBoxBorderColor(combatBox, -1);
   playBox.addEventListener("click", handleChoice);
   playBox.focus();
