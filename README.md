@@ -1,7 +1,7 @@
 # rpsls
-A browser based game of rock, paper, scissors, lizard, spock! (As seen in the big bang theory)
+A online game of rock, paper, scissors, lizard, spock! (As seen in the big bang theory)
 
-Players play best of 5 rounds.
+The player starts with 5 lives. The game ends when the player's lives are over.
 
 Here's the rules:
 
@@ -11,4 +11,9 @@ Here's the rules:
 - Lizard poisons Spock and eats Paper
 - Spock smashes Scissors and vaporizes Rock
 
-Have fun Playing! :computer: by [Jesse](https://github.com/CodeReDarsh) a.k.a CodeReDarsh | Credit [Pixilpretzel](https://es.pixilart.com/pixilpretzel) for the USS Enterprise GIF | [MooniDev](https://github.com/mooniiDev) for UI inspiration.
+Have fun Playing! 
+
+Made by [Jesse (CodeReDarsh)](https://github.com/CodeReDarsh) | Credit [Pixilpretzel](https://es.pixilart.com/pixilpretzel) for the USS Enterprise GIF | [MooniDev](https://github.com/mooniiDev) for the UI inspiration.
+
+Special thanks to [The Odin Project](https://www.theodinproject.com/) and their awesome community for
+taking me on this journey. If you have the means, consider donating!
