@@ -1,5 +1,5 @@
 # rpsls
-A online game of rock, paper, scissors, lizard, spock! (As seen in the big bang theory)
+An online game of rock, paper, scissors, lizard, spock! (As seen in the big bang theory)
 
 The player starts with 5 lives. The game ends when the player's lives are over.
 
