@@ -250,7 +250,8 @@ function handleChoice(e) {
     return;
   }
   playBox.focus();
-  playRound(playerChoice, getComputerChoice());
+  setRandomComputerChoice();
+  playRound();
 }
 
 function handlePlayAgainRequest(e) {
