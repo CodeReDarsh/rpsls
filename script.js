@@ -220,21 +220,20 @@ function playRound() {
   setEnemyChoiceImage();
 
   if (playerChoice === computerChoice) {
-    // tie
     setBoxBorderColor(combatBox, 2);
-    commentaryPara.textContent = "It seems neither has bested the other. Both survive this round.";
-  } else if (playerWins(playerChoice, computerChoice)) {
-    computerLives -= 1;
+    updateCommentary(2);
+  } else if (playerWins()) {
+    computerLives--;
     setBoxBorderColor(combatBox, 1);
-    commentaryPara.textContent = comments.playerChoice[`win${computerChoice}`];
+    updateCommentary(1);
   } else {
-    // player loses
-    playerLives -= 1;
+    playerLives--;
     setBoxBorderColor(combatBox, 0);
-    commentaryPara.textContent = comments.playerChoice[`lose${computerChoice}`];
+    updateCommentary(0);
   }
 
-  livesInfoPara.textContent = `Your lives: ${playerLives} | Enemy lives: ${computerLives}`;
+  displayUpdatedLives();
+
   if (playerLives <= 0) {
     endGame(0);
   } else if (computerLives <= 0) {
