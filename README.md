@@ -11,4 +11,4 @@ Here's the rules:
 - Lizard poisons Spock and eats Paper
 - Spock smashes Scissors and vaporizes Rock
 
-Have fun Playing! :computer: by [Jesse](https://github.com/CodeReDarsh) | Credit [Pixilpretzel](https://es.pixilart.com/pixilpretzel) for the USS Enterprise GIF | [MooniDev](https://github.com/mooniiDev) for UI inspiration.
+Have fun Playing! :computer: by [Jesse](https://github.com/CodeReDarsh) a.k.a CodeReDarsh | Credit [Pixilpretzel](https://es.pixilart.com/pixilpretzel) for the USS Enterprise GIF | [MooniDev](https://github.com/mooniiDev) for UI inspiration.
