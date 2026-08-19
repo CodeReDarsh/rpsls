@@ -129,7 +129,7 @@ function setRandomComputerChoice() {
   }
 }
 
-function playerWins(playerChoice, computerChoice) {
+function playerWins() {
   switch (computerChoice) {
     case "rock":
       return playerChoice === "paper" || playerChoice === "spock";
