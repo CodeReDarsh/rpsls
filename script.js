@@ -188,9 +188,7 @@ function endGame(result) {
   resultsBox.focus();
 }
 
-function playRound(playerChoice, computerChoice) {
-  setEnemyChoiceImage(computerChoice);
-  round += 1;
+function displayUpdatedRoundNumber() {
   roundNumberPara.textContent = `Round: ${round}`;
 
   if (playerChoice === computerChoice) {
