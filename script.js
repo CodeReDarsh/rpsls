@@ -146,15 +146,15 @@ function playerWins() {
   }
 }
 
-function setEnemyChoiceImage(choice) {
-  const enemyChoiceImgElement = document.querySelector(".enemy-choice").lastElementChild;
-  let newSrc;
-  if (choice === "spock") {
-    newSrc = "./assets/mirror-spock.png";
+function setEnemyChoiceImage() {
+  const enemyChoiceImg = combatBox.firstElementChild.lastElementChild;
+  if (computerChoice === "spock") {
+    enemyChoiceImg.src = "./assets/mirror-spock.png";
+  } else if (computerChoice === "") {
+    enemyChoiceImg.src = "./assets/placeholder.svg";
   } else {
-    newSrc = `./assets/${choice}.png`;
+    enemyChoiceImg.src = `./assets/${computerChoice}.png`;
   }
-  enemyChoiceImgElement.src = newSrc;
 }
 
 function setBoxBorderColor(element, roundDecision) {
